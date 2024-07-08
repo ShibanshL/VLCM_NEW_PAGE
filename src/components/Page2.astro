@@ -1,0 +1,26 @@
+---
+import { Page2_Obj } from "../content/PageData"
+---
+
+
+<div class="PAGE2 w-full h-[100vh] flex items-center justify-center p-[20px]">
+    <div class=" PAGE2_CARD w-full h-[80%] bg-[rgba(0,0,0,0.1)] rounded-md flex items-center justify-center flex-col p-[15px]">
+        {Page2_Obj.map((e:any, idx:number) => {
+            return(
+                <>
+                    <div class={`w-full h-[33%] flex items-center justify-center border-b-2 ${Page2_Obj.length == idx+1 ? 'border-none':'border-white'} p-[10px]`}>
+                        <div class="w-[90%] h-full flex items-start justify-center flex-col">
+                            <h2 class="text-4xl font-semibold text-white">{e.name}</h2>
+                            <p class=" text-sm text-white pt-[10px]">{e.desc}</p>
+                        </div>
+                        <div class="w-[10%] h-full flex items-end justify-end">
+                            <div class="bg-pink-600 h-[30px] w-[30px] rounded-[30px]"></div>
+                        </div>
+                    </div>
+                </>
+            )
+        })}
+    </div>
+</div>
+
+
