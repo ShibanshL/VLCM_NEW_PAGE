@@ -1,23 +1,26 @@
 <div class="PAGE1 w-full h-[100vh]">
     <div class="NAVBAR w-full h-[15%]  flex items-center justify-between p-[20px]">
-        <div class="NAVOPTIONS h-full w-[40%] flex items-center justify-between ">
-            <h2 class=" text-3xl">eGyanamTech</h2>
-            <p>Pricing</p>
-            <p>Documentation</p>
-            <p>Extra</p>
+        <div class="NAVOPTIONS h-full w-[40%] flex items-center justify-between">
+            <h2 class="text-3xl max-[640px]:text-2xl">eGyanamTech</h2>
+            <p class="max-[640px]:hidden">Pricing</p>
+            <p class="max-[640px]:hidden">Documentation</p>
+            <p class="max-[640px]:hidden">Extra</p>
         </div>
-        <div class="NAVOPTIONS h-full w-[17%] flex items-center justify-between ">
+        <div class="NAVOPTIONS h-full w-[17%] flex items-center justify-between max-[640px]:hidden">
             <button class=" border-pink-400 border-[3px] p-[5px] pl-[20px] pr-[20px] rounded-[50px]">Sign in</button>
             <button class=" border-pink-400 border-[3px] bg-pink-400 p-[5px] pl-[20px] pr-[20px] rounded-[50px]">Try Free</button>
         </div>
+        <div class="NAVOPTIONS_MOBILE h-full w-[17%] flex items-center justify-end max-[640px]:flex">
+            <button class=" border-pink-400 h-[30px] bg-pink-600 w-[30px] rounded-[50px]"></button>
+        </div>
     </div>
-    <div class="BODY w-full h-[85%]  flex items-end justify-center p-[20px]">
-        <div class="w-1/2 flex items-start justify-center flex-col">
+    <div class="BODY w-full h-[85%]  flex max-[640px]:items-center items-end justify-center p-[20px]">
+        <div class="w-1/2 max-[640px]:w-full flex items-start justify-center flex-col">
             <h2 class="text-5xl">eGyanamTech's</h2>
             <h1 class="text-7xl">ISMS</h1>
             <h3>A Unified Platform for All Your Cybersecurity Needs.</h3>
         </div>
-        <div class="w-1/2 text-left">
+        <div class="w-1/2 text-left max-[640px]:hidden">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, dolore laborum aliquam eveniet veritatis quisquam qui nulla accusantium! Perspiciatis reiciendis debitis temporibus ratione distinctio. Rerum quaerat, nostrum ratione quibusdam, iste explicabo, porro perferendis ex corrupti ad sit ducimus labore nam!</p>
         </div>
     </div>
