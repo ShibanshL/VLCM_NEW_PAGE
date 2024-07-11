@@ -4,19 +4,19 @@ import {Page3_Obj} from '../content/PageData'
 
 
 <div class="PAGE3 w-full h-full flex items-start justify-center flex-col p-[20px]">
-    <h1 class="PAGE3_HEAD text-6xl text-left max-[640px]:text-5xl">/ISMS Functionalities</h1>
+    <h1 class="PAGE3_HEAD text-6xl text-left max-[320px]:text-4xl max-[640px]:text-5xl">/ISMS Functionalities</h1>
     {Page3_Obj.map((e:any, idx:number) => {
         return (
             <>
-                <div class={`FUNCTION_cARDS w-full max-[640px]:h-[120vh] max-[375px]:h-[150vh] max-[1024px]:h-[100vh] h-[80vh] flex items-start justify-center flex-col pl-[50px]  border-b-[1px] ${idx+1 == Page3_Obj.length?'border-none':'border-white'}`} >
-                    <h2 class=" text-3xl">{e.heading}</h2>
-                    <div class=" w-full h-[75%] flex items-center justify-start max-[640px]:flex-col max-[1024px]:flex-col flex-grow-0 pt-[20px] pr-[20px] pb-[20px]">
+                <div class={`FUNCTION_cARDS w-full max-[640px]:h-[120vh] max-[375px]:h-[150vh] max-[305px]:h-[180vh] max-[1024px]:h-[100vh] h-[80vh] flex items-start justify-center flex-col pl-[50px]  border-b-[1px] ${idx+1 == Page3_Obj.length?'border-none':'border-white'}`} >
+                    <h2 class=" text-3xl ">{e.heading}</h2>
+                    <div class=" w-full h-[75%] flex items-center justify-start max-[640px]:flex-col max-[1024px]:flex-col flex-grow-0 pt-[20px] pr-[20px] pb-[20px] max-[305px]:pr-[10px] max-[305px]:pb-[10px]">
                         {e.cards.map((val:any) => {
                             return (
                                 <>
                                     <div class=" h-[90%] w-[33%] max-[640px]:h-[33%%] max-[640px]:w-full max-[640px]:bg-[rgba(0,0,0,0.1)] max-[640px]:rounded-[10px] max-[640px]:p-[15px] max-[1024px]:gap-[10px]  max-[1024px]:h-[33%%] max-[1024px]:w-full max-[1024px]:bg-[rgba(0,0,0,0.1)] max-[1024px]:rounded-[10px] max-[1024px]:p-[15px] flex items-start justify-between flex-col m-[10px]">
                                         <div class="h-[30px] w-[30px] rounded-[30px] bg-amber-400"></div>
-                                        <h2 class="text-5xl max-[640px]:text-3xl max-[1080px]:text-4xl">{val.title}</h2>
+                                        <h2 class="text-5xl max-[640px]:text-2xl max-[1080px]:text-4xl">{val.title}</h2>
                                         <p class="text-sm max-[640px]:text-[0.775rem]">{val.desc}</p>
                                         <button class="p-[5px] pl-[15px] pr-[15px] border-white border-[3px] hover:bg-white rounded-[25px]">Learn More</button>
                                     </div>
