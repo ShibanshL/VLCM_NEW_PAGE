@@ -1,0 +1,9 @@
+---
+import { getCollection } from "astro:content"
+
+const carousel = await getCollection("carousel")
+
+// console.log(carousel)
+---
+
+<div class="h-[100vh] w-full bg-pink-400"><a href="/docs">{carousel[0].data[1]}</a></div>

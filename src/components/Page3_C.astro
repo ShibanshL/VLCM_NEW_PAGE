@@ -20,7 +20,7 @@ import svg2 from '../docs/carousel-2.svg'
             return(
                 <>
                     <div id={`carousel-item-${idx+1}`} class="hidden duration-700 ease-in-out">
-                            <div class="h-full absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 p-[30px] max-[640px]:p-[10px] max-[640px]:pt-[0] bg-[rgba(0,0,0,0.25)]">
+                            <div class="h-full  max-[750px]:h-[180vh] absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 p-[30px] max-[640px]:p-[10px] max-[640px]:pt-[0] bg-[rgba(255,255,255,0.25)]">
                                 <div class={`FUNCTION_CARDS w-full max-[640px]:h-[120vh] max-[375px]:h-[150vh] max-[305px]:h-[180vh] max-[1024px]:h-[100vh] h-[80vh] flex items-start justify-center flex-col pl-[50px] max-[640px]:pt-[0] max-[1024px]:pl-[20px] max-[640px]:pl-[10px]`} >
                                     <h2 class=" text-3xl max-[640px]:text-2xl">{e.heading}</h2>
                                     <div class=" w-full h-[75%] flex items-center justify-start max-[640px]:flex-col max-[1024px]:flex-col flex-grow-0 pt-[20px] pr-[20px] pb-[20px]  max-[305px]:pr-[10px] max-[305px]:pb-[10px]">
@@ -31,7 +31,9 @@ import svg2 from '../docs/carousel-2.svg'
                                                         <div class="h-[30px] w-[30px] rounded-[30px] bg-amber-400 max-[640px]:hidden"></div>
                                                         <h2 class="text-5xl max-[640px]:text-xl max-[1080px]:text-4xl">{val.title}</h2>
                                                         <p class="text-sm max-[640px]:text-[0.775rem] max-[640px]:hidden">{val.desc}</p>
-                                                        <button class="p-[5px] pl-[15px] pr-[15px] border-white border-[3px] hover:bg-white rounded-[25px] max-[640px]:hidden">Learn More</button>
+                                                        <a href={`/carousel/${val.title.split(' ').join('_')}`}>
+                                                            <button class="p-[5px] pl-[15px] pr-[15px] border-white border-[3px] hover:bg-white rounded-[25px] max-[640px]:hidden">Learn More</button>
+                                                        </a>
                                                     </div>
                                                 </>
                                             )
@@ -47,7 +49,7 @@ import svg2 from '../docs/carousel-2.svg'
         </div>
         <!-- Slider indicators -->
         <div
-            class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse"
+            class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse transition ease-in-out duration-1000"
         >
             {Page3_Obj.map((e:any, idx:number) => {
                 return(
@@ -55,7 +57,7 @@ import svg2 from '../docs/carousel-2.svg'
                         <button
                             id={`carousel-indicator-${idx+1}`}
                             type="button"
-                            class="h-3 w-3 rounded-full transition ease duration-1000"
+                            class="h-3 w-3 rounded-full transition ease-in-out duration-1000"
                             aria-current={idx == 0  ? "true":"false"}
                             aria-label={`Slide ${idx+1}`}
                         ></button>
@@ -136,12 +138,12 @@ import svg2 from '../docs/carousel-2.svg'
         // options with default values
         const options = {
             defaultPosition: 1,
-            interval: 5000,
+            interval: 3500,
 
             indicators: {
-                activeClasses: 'bg-white dark:bg-gray-800 w-5 transition ease duration-1000',
+                activeClasses: 'bg-white dark:bg-gray-800 w-5 transition ease-in-out duration-1000',
                 inactiveClasses:
-                    'bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 transition ease duration-1000',
+                    'bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 transition ease-in-out duration-1000',
                     items:Page3_Obj.map((e:any, idx:number) =>{
                         return {
                             position:idx,

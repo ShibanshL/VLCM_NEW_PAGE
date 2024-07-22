@@ -14,7 +14,7 @@ import { Page2_Obj } from "../content/PageData"
                             <p class=" text-sm text-white pt-[10px] max-[640px]:hidden">{e.desc}</p>
                         </div>
                         <div class="w-[10%] h-full max-[640px]:h-[10%] max-[640px]:w-full flex items-end justify-end pb-[10px]">
-                            <div class="bg-pink-600 h-[30px] w-[30px] rounded-[30px] "></div>
+                            <a href={`/features/${e.name.split(' ').join('_')}`}><div class="bg-pink-600 h-[30px] w-[30px] rounded-[30px] "></div></a>
                         </div>
                     </div>
                 </>

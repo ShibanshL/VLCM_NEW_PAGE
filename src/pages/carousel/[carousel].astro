@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {carousel: 'Metrics_and_Dashboards'}},
+    {params: {carousel: 'Drill-Down_Capability'}},
+    {params: {carousel: 'Data-Driven_Decisions'}},
+
+    {params: {carousel: 'Live_Threat_Monitoring'}},
+    {params: {carousel: 'Activity_Tracking'}},
+    {params: {carousel: 'Improved_Response_Times'}},
+
+
+    {params: {carousel: 'Automated_Tasks'}},
+    {params: {carousel: 'Role-Based_Access_Control'}},
+    {params: {carousel: 'Audit_Trail'}},
+
+    {params: {carousel: 'Comprehensive_Asset_List'}},
+    {params: {carousel: 'Automatic_Discovery'}},
+    {params: {carousel: 'Customizable_Fields'}},
+
+    {params: {carousel: 'Seamless_Data_Exchange'}},
+    {params: {carousel: 'Correlations_and_Insights'}},
+    {params: {carousel: 'Centralized_Management'}},
+
+    {params: {carousel: 'Automated_Vulnerability_Scans'}},
+    {params: {carousel: 'Prioritization_and_Remediation'}},
+    {params: {carousel: 'Patch_Management'}},
+
+    {params: {carousel: 'Incident_Reporting'}},
+    {params: {carousel: 'Incident_Response_Plan_Execution'}},
+    {params: {carousel: 'Lessons_Learned'}},
+
+    {params: {carousel: 'Centralized_Risk_Repository'}},
+    {params: {carousel: 'Compliance_Management'}},
+    {params: {carousel: 'Continuous_Improvement'}},
+   
+  ];
+}
+
+const { carousel } = Astro.params;
+
+console.log(carousel)
+---
+
+
+<Layout title={carousel.split('_').join(' ')}>
+    <h1>{carousel.split('_').join(' ')}</h1>
+</Layout>

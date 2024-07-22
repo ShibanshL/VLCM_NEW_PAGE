@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+
+export function getStaticPaths() {
+  return [
+    {params: {features: 'Cloud_Security_and_Optimization'}},
+    {params: {features: 'Audit_and_Compliance_Support'}},
+    {params: {features: 'SIEM_and_SOAR_Support'}},
+  ];
+}
+
+const { features } = Astro.params;
+---
+
+<Layout title={features.split('_').join(' ')}>
+    <h1>{features.split('_').join(' ')}!</h1>
+</Layout>

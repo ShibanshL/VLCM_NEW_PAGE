@@ -68,7 +68,7 @@ const Page3_Obj = [
                 icon:''
             },
             {
-                title:'Comprehensive Asset List',
+                title:'Automatic Discovery',
                 desc:'Discovers new assets automatically, ensuring up-to-date information and preventing security gaps.',
                 icon:''
             },
